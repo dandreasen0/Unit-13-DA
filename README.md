@@ -28,12 +28,10 @@ Load balancing ensures that the application will be highly accessible, in additi
 _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the files and system files.
-- 
-_TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat allows us to monitor the logs from the specified servers. 
+- Metricbeats logs usage of server resources and telemetry.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -49,16 +47,17 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 75.164.84.48
 
-Machines within the network can only be accessed by Jumpbox.
+Machines within the network can only be accessed by Jumpbox. ?????
 - Jump-Box-Provisioner [10.0.0.4]
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 75.164.84.48         |
+| Web-1    | Yes                 | 75.164.84.48 10.0.0.4|
+| Web-2    | Yes                 | 75.164.84.48 10.0.0.4|
+| Elk      | Yes                 | 75.164.84.48 10.0.0.4|
 
 ### Elk Configuration
 
@@ -66,7 +65,6 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - Less time to configure
 - Configuration can be done remotely
 - Configuration can be done on muntiple servers at once
-_TODO: What is the main advantage of automating configuration with Ansible?_
 
 The playbook implements the following tasks:
 - Install Docker and Python
