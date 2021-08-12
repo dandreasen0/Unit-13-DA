@@ -4,7 +4,7 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Diagram/VM_Network_Diagram.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
   - ![Elk YAML Install file](Ansible/install-elk.yml)
   - ![Filebeat YAML Install File](Ansible/filebeats_playbook.yml)
@@ -46,8 +46,10 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - 75.164.84.48
 
-Machines within the network can only be accessed by Jumpbox. ?????
-- Jump-Box-Provisioner [10.0.0.4]
+Machines within the network can only be accessed by Jumpbox.
+- Web-1 [10.0.0.5]
+- Web-2 [10.0.0.6]
+- Elk [10.1.0.4]
 
 A summary of the access policies in place can be found in the table below.
 
