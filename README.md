@@ -97,13 +97,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include... 
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- The YAML file is the playbook, and should be copied to the server which is running it.
+- Update the Hosts File to include the servers you wish to configure.
+- Run the playbook, and navigate to http://localhost:5601/ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- YAML file is the playbook, and should be copied to the server which is running it.
-- Hosts File
-- http://localhost:5601/
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
